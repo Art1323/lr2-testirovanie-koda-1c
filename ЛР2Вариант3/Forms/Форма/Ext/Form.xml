@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаРассчитатьZ" id="10">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.РассчитатьZ</CommandName>
+				<ExtendedTooltip name="ФормаРассчитатьZРасширеннаяПодсказка" id="11"/>
+			</Button>
+			<Button name="ФормаВыполнитьТестыВарианта3" id="12">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыполнитьТестыВарианта3</CommandName>
+				<ExtendedTooltip name="ФормаВыполнитьТестыВарианта3РасширеннаяПодсказка" id="13"/>
+			</Button>
+			<Button name="ФормаВыполнитьТестыРисунка1" id="14">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыполнитьТестыРисунка1</CommandName>
+				<ExtendedTooltip name="ФормаВыполнитьТестыРисунка1РасширеннаяПодсказка" id="15"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаИсходныеДанные" id="100">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исходные данные (вариант 3)</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>WeakSeparation</Representation>
+			<ShowTitle>true</ShowTitle>
+			<ExtendedTooltip name="ГруппаИсходныеДанныеРасширеннаяПодсказка" id="101"/>
+			<ChildItems>
+				<InputField name="X1" id="110">
+					<DataPath>X1</DataPath>
+					<ContextMenu name="X1КонтекстноеМеню" id="111"/>
+					<ExtendedTooltip name="X1РасширеннаяПодсказка" id="112"/>
+				</InputField>
+				<InputField name="X2" id="113">
+					<DataPath>X2</DataPath>
+					<ContextMenu name="X2КонтекстноеМеню" id="114"/>
+					<ExtendedTooltip name="X2РасширеннаяПодсказка" id="115"/>
+				</InputField>
+				<InputField name="X3" id="116">
+					<DataPath>X3</DataPath>
+					<ContextMenu name="X3КонтекстноеМеню" id="117"/>
+					<ExtendedTooltip name="X3РасширеннаяПодсказка" id="118"/>
+				</InputField>
+				<CheckBoxField name="ИсправленнаяВерсия" id="119">
+					<DataPath>ИсправленнаяВерсия</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИсправленнаяВерсияКонтекстноеМеню" id="120"/>
+					<ExtendedTooltip name="ИсправленнаяВерсияРасширеннаяПодсказка" id="121"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРезультат" id="200">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат расчета</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>WeakSeparation</Representation>
+			<ShowTitle>true</ShowTitle>
+			<ExtendedTooltip name="ГруппаРезультатРасширеннаяПодсказка" id="201"/>
+			<ChildItems>
+				<InputField name="СреднееXср" id="210">
+					<DataPath>СреднееXср</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="СреднееXсрКонтекстноеМеню" id="211"/>
+					<ExtendedTooltip name="СреднееXсрРасширеннаяПодсказка" id="212"/>
+				</InputField>
+				<InputField name="РезультатZ" id="213">
+					<DataPath>РезультатZ</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="РезультатZКонтекстноеМеню" id="214"/>
+					<ExtendedTooltip name="РезультатZРасширеннаяПодсказка" id="215"/>
+				</InputField>
+				<InputField name="ПройденнаяВетка" id="216">
+					<DataPath>ПройденнаяВетка</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ПройденнаяВеткаКонтекстноеМеню" id="217"/>
+					<ExtendedTooltip name="ПройденнаяВеткаРасширеннаяПодсказка" id="218"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="НадписьВетки" id="250">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ветки: a — ввод и Xср; b — Z = Sin X1; c — X1 ≤ Xср; d — Z = Cos X2; e — X2 ≤ Xср; f — Z = Tg|X3|; g — Z = 0; h — вывод Z. Результат теста «Успешно» — тест обнаружил ошибку.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="НадписьВеткиКонтекстноеМеню" id="251"/>
+			<ExtendedTooltip name="НадписьВеткиРасширеннаяПодсказка" id="252"/>
+		</LabelDecoration>
+		<LabelField name="ИтогТестирования" id="300">
+			<DataPath>ИтогТестирования</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ИтогТестированияКонтекстноеМеню" id="301"/>
+			<ExtendedTooltip name="ИтогТестированияРасширеннаяПодсказка" id="302"/>
+		</LabelField>
+		<Table name="Тесты" id="400">
+			<Representation>List</Representation>
+			<ReadOnly>true</ReadOnly>
+			<DataPath>Тесты</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТестыКонтекстноеМеню" id="401"/>
+			<AutoCommandBar name="ТестыКоманднаяПанель" id="402">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТестыРасширеннаяПодсказка" id="403"/>
+			<SearchStringAddition name="ТестыСтрокаПоиска" id="404">
+				<AdditionSource>
+					<Item>Тесты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТестыСтрокаПоискаКонтекстноеМеню" id="405"/>
+				<ExtendedTooltip name="ТестыСтрокаПоискаРасширеннаяПодсказка" id="406"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТестыСостояниеПросмотра" id="407">
+				<AdditionSource>
+					<Item>Тесты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТестыСостояниеПросмотраКонтекстноеМеню" id="408"/>
+				<ExtendedTooltip name="ТестыСостояниеПросмотраРасширеннаяПодсказка" id="409"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТестыУправлениеПоиском" id="410">
+				<AdditionSource>
+					<Item>Тесты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТестыУправлениеПоискомКонтекстноеМеню" id="411"/>
+				<ExtendedTooltip name="ТестыУправлениеПоискомРасширеннаяПодсказка" id="412"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ТестыНомер" id="420">
+					<DataPath>Тесты.Номер</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТестыНомерКонтекстноеМеню" id="421"/>
+					<ExtendedTooltip name="ТестыНомерРасширеннаяПодсказка" id="422"/>
+				</InputField>
+				<InputField name="ТестыМетод" id="423">
+					<DataPath>Тесты.Метод</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТестыМетодКонтекстноеМеню" id="424"/>
+					<ExtendedTooltip name="ТестыМетодРасширеннаяПодсказка" id="425"/>
+				</InputField>
+				<InputField name="ТестыИсходныеДанные" id="426">
+					<DataPath>Тесты.ИсходныеДанные</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТестыИсходныеДанныеКонтекстноеМеню" id="427"/>
+					<ExtendedTooltip name="ТестыИсходныеДанныеРасширеннаяПодсказка" id="428"/>
+				</InputField>
+				<InputField name="ТестыОжидаемаяВетка" id="429">
+					<DataPath>Тесты.ОжидаемаяВетка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТестыОжидаемаяВеткаКонтекстноеМеню" id="430"/>
+					<ExtendedTooltip name="ТестыОжидаемаяВеткаРасширеннаяПодсказка" id="431"/>
+				</InputField>
+				<InputField name="ТестыФактическаяВетка" id="432">
+					<DataPath>Тесты.ФактическаяВетка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТестыФактическаяВеткаКонтекстноеМеню" id="433"/>
+					<ExtendedTooltip name="ТестыФактическаяВеткаРасширеннаяПодсказка" id="434"/>
+				</InputField>
+				<InputField name="ТестыОжидаемыйРезультат" id="435">
+					<DataPath>Тесты.ОжидаемыйРезультат</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТестыОжидаемыйРезультатКонтекстноеМеню" id="436"/>
+					<ExtendedTooltip name="ТестыОжидаемыйРезультатРасширеннаяПодсказка" id="437"/>
+				</InputField>
+				<InputField name="ТестыФактическийРезультат" id="438">
+					<DataPath>Тесты.ФактическийРезультат</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТестыФактическийРезультатКонтекстноеМеню" id="439"/>
+					<ExtendedTooltip name="ТестыФактическийРезультатРасширеннаяПодсказка" id="440"/>
+				</InputField>
+				<InputField name="ТестыРезультатТестирования" id="441">
+					<DataPath>Тесты.РезультатТестирования</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТестыРезультатТестированияКонтекстноеМеню" id="442"/>
+					<ExtendedTooltip name="ТестыРезультатТестированияРасширеннаяПодсказка" id="443"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ЛР2Вариант3</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="X1" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>X1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>20</v8:Digits>
+					<v8:FractionDigits>13</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="X2" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>X2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>20</v8:Digits>
+					<v8:FractionDigits>13</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="X3" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>X3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>20</v8:Digits>
+					<v8:FractionDigits>13</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИсправленнаяВерсия" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исправленная версия программы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СреднееXср" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Xср</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>20</v8:Digits>
+					<v8:FractionDigits>6</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РезультатZ" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПройденнаяВетка" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пройденная ветка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогТестирования" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Тесты" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тесты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Номер" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>№</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Метод" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Назначение / метод</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИсходныеДанные" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Набор тестов</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОжидаемаяВетка" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ожидаемая ветка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ФактическаяВетка" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фактическая ветка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОжидаемыйРезультат" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ожидаемый результат</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ФактическийРезультат" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фактический результат</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="РезультатТестирования" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат тестирования</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="РассчитатьZ" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычислить Z</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip/>
+			<Action>РассчитатьZ</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыполнитьТестыВарианта3" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тесты варианта 3 (часть 2)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip/>
+			<Action>ВыполнитьТестыВарианта3</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыполнитьТестыРисунка1" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тесты рисунка 1 (часть 1)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip/>
+			<Action>ВыполнитьТестыРисунка1</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>
